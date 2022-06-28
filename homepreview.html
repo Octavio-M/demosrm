@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Demo ITT/HomePreview</title>
+</head>
+
+<body>
+<!-- e-planning v4 - Comienzo espacio Clarin Test _ Home _ HomePreviewO -->
+<script language="JavaScript" type="text/javascript"><!--
+var eplDoc = document, eplLL = false, eS1 = 'us.img.e-planning.net', eplArgs = { iIF:1,sV: schemeLocal() + "://ads.e-planning.net/" ,vV:"4",sI:"4a67",sec:"Home",kVs:{  }};
+function eplCheckStart() {
+	if (document.epl) {
+		var e = document.epl;
+		if (e.eplReady()) return true;
+		e.eplInit(eplArgs);
+		if (eplArgs.custom) {
+			for (var s in eplArgs.custom) {
+				e.setCustomAdShow(s, eplArgs.custom[s]);
+			}
+		}
+		return e.eplReady();
+	} else if (!eplLL) {
+		var epl41Script = document.createElement('SCRIPT'); epl41Script.async = true;
+		epl41Script.src = schemeLocal() + '://' + eS1 + '/layers/epl-41.js';
+		document.head.appendChild(epl41Script);
+		eplLL = true;
+	}
+	return false;
+}
+eplCheckStart();
+function eplSetAd(eID) {
+	var opts;
+	if (eplCheckStart()) {
+		if (eplArgs.sOpts && eplArgs.sOpts[eID]) {
+			opts = eplArgs.sOpts[eID];
+			if (opts.custF) { document.epl.setCustomAdShow(eID,opts.custF); }
+		} else { opts = {}; }
+		document.epl.setSpace(eID, opts);
+	} else {
+		setTimeout(eplSetAd.bind(null, eID), 250);
+	}
+}
+function eplAD4(eID, opts) {
+	document.write('<div id="eplAdDiv'+eID+'"></div>');
+	if (!eplArgs.sOpts) { eplArgs.sOpts = {}; }
+	eplArgs.sOpts[eID] = opts || {t:1};
+	eplSetAd(eID);
+}
+function schemeLocal() {
+	protocol = document.location.protocol || window.top.location.protocol;
+	if (protocol) {
+		return protocol.indexOf('https') !== -1 ? 'https' : 'http';
+	}
+}
+//--></script>
+<script>eplAD4("HomePreviewO",{t:1,timeout:0,ma:1,custF:null,wh:"1x1",sd:"4a67!Home!" + schemeLocal() + "://ads.e-planning.net/!!", p:"192c51414f7f89f9"});</script>
+<!-- e-planning v4 - Fin espacio Clarin Test _ Home _ HomePreviewO -->
+
+
+  <div class="page">
+    <header>
+      <span>header</span>
+    </header>
+    <nav>
+      <span>nav</span>
+    </nav>
+    <section>
+      <span>section</span>
+    </section>
+    <div class="article">
+      <span>article</span>
+    </div>
+	<div class="article2">
+      <span>article</span>
+    </div>
+    <aside>
+      <span>aside</span>
+    </aside>
+    <footer>
+      <span>footer</span>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+section {
+  grid-area: section;
+  flex-direction: column;
+	padding: 10px;
+  }
+article {
+  grid-area: article;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
+.page {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 50px 500px 50px 50px 200px;
+  grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "section section section aside"
+    "article article article aside"
+	"article2 article2 article2 aside"
+    "footer footer footer footer";
+  grid-gap: 5px;
+  
+  background: #222;
+}
+header {
+  width: 100%;
+  height: 100%;
+  background: silver;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  width: 100%;
+  height: 100%;
+  background: grey;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article{
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: article;
+}
+.article2{
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: article2;
+}
+aside {
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span, p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
